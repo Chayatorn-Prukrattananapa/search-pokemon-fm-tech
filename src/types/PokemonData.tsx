@@ -47,5 +47,4 @@ export interface Pokemon {
 
 export interface PokemonVariables {
     name? : string;
-    first? : number;
 }
