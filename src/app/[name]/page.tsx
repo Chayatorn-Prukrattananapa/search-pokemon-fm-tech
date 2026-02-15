@@ -22,7 +22,7 @@ export default function Page() {
             <Link href="/" className="text-white hover:underline mb-4 inline-block p-2 border border-blue-500 rounded bg-blue-600">Back to Search</Link>
         </div>
         {loading && <p>Loading...</p>}
-        {!data?.pokemon && <p>Pokemon not found</p>}
+        {!loading && !data?.pokemon && <p>Pokemon not found</p>}
         {data?.pokemon && <PokemonCard pokemon={data?.pokemon} />}
     </div>
 );
