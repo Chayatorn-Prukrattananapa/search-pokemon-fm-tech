@@ -1,5 +1,3 @@
-"use client";
-
 interface SearchBarProps {
     name: string;
     setName: (name: string) => void;
