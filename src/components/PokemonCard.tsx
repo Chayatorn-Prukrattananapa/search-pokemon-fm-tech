@@ -1,15 +1,10 @@
-"use client";
 import React from "react";
-import { PokemonData } from "@/types/PokemonData";
+import { Pokemon } from "@/types/PokemonData";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./PokemonCard.module.css";
 
-interface PokemonCardProps {
-  pokemon: PokemonData;
-}   
-
-const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
+const PokemonCard: React.FC<Pokemon> = ({ pokemon }) => {
   if (!pokemon) return null;
 
   return (
@@ -44,7 +39,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
                 <strong className={styles.label}>Evolutions:</strong>
                 {pokemon.evolutions.map((evolution) => (
                     <div key={evolution.id} className="ml-4">
-                        <Link href={`/${evolution.name.toLowerCase()}`}>
+                        <Link href={`/${evolution.name.toLowerCase()}`} className={styles.viewLink}>
                             <strong>{evolution.name}</strong> (#{evolution.number})
                         </Link>
                     </div>

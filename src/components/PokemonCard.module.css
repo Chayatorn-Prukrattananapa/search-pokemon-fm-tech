@@ -18,7 +18,6 @@
 }
 
 .image {
-  border-radius: 8px;
   background: #fff;
   justify-self: center;
   margin: 1em;
@@ -38,9 +37,9 @@
 
 .viewLink {
   display: inline-block;
-  color: #3f87de;
+  color: #5a87be;
 }
 
 .viewLink:hover {
-  color: #00318b;
+  color: #1b52b8;
 }
